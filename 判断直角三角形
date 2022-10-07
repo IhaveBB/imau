@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,t;
+    printf("请输入三个整数");
+    scanf("%d%d%d",&a,&b,&c);
+    if(a<b)
+    {
+        t=a;a=b;b=t;
+    }
+    if(a<c)
+    {
+        t=a;a=c;c=t;
+    }
+    if(a*a==b*b+c*c)
+    {
+        printf("这是一个直角三角形");
+    }
+    else
+    {
+        printf("这不是直角三角形");
+    }
+    return 0;
+}
