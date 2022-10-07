@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main() {
+    double d;
+    scanf("%lf", &d);
+    if (d >= 0) {
+        int a = d + 0.5;
+        printf("%d\n", a);
+    } else {
+        int a = d - 0.5;
+        printf("%d\n", a);
+    }
+    return 0;
+}
