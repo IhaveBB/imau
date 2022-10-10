@@ -263,3 +263,49 @@ int main()
 	return 0;
 
 }
+//88888
+#define _CRT_SECURE_NO_WARNINGS
+//（9）    输入三角形的三边长，判断这个三角形是否是直角三角形。直角三角形斜边最长，
+//要先找出三边中最长的边，判断最长边的平方是否等于其余两边的平方和，若相等就是直角三角形。
+#include<stdio.h>
+int main()
+{
+	int a, b, c, s;
+	scanf("%d%d%d", &a,&b, &c);
+	if (a >=b&&a>=c)
+	{
+		if(a * a ==- b * b + c * c)
+		{
+			printf("Yes");
+		}
+		else
+		{
+			printf("No");
+		}
+	}
+	else if (b >= a && b >= c)
+	{
+		if (b * b == a * a + c * c)
+		{
+			printf("Yes");
+		}
+		else
+		{
+			printf("No");
+		}
+	}
+	else if (c >= b && c >= a)
+	{
+		if (c * c == b * b + a * a)
+		{
+			printf("Yes");
+		}
+		else
+		{
+			printf("No");
+		}
+	}
+
+
+	return 0;
+}
