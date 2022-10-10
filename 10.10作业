@@ -11,46 +11,47 @@
 #include<math.h>
 int main()
 {
-	int a=0,b=0,c=0,na=0,nb=0,nc=0,max;
-	printf("请输入三个数");
-	scanf("%d%d%d",&a,&b,&c);
-	if (a > 0 && b > 0 && c > 0)
-	{
-		if (a >= b)
-		{
-			max = a;
-		}
-		else
-		{
-			max = b;
-		}
-		if (c > max)
-		{
-			max = c;
-		}
-	}
-	if (a < 0 && b < 0 && c < 0)
-	{
-		//负数绝对值转换为正数
-		na = abs(a);
-		nb = abs(b);
-		nc = abs(c);
+ int a = 0, b = 0, c = 0, na = 0, nb = 0, nc = 0, max;
+ printf("请输入三个数");
+ scanf("%d%d%d", &a, &b, &c);
+ if (a > 0 && b > 0 && c > 0)
+ {
+  if (a >= b)
+  {
+   max = a;
+  }
+  else
+  {
+   max = b;
+  }
+  if (c > max)
+  {
+   max = c;
+  }
+  printf("max=%d", max);
+ }
+ if (a < 0 && b < 0 && c < 0)
+ {
+  //负数绝对值转换为正数
+  na = abs(a);
+  nb = abs(b);
+  nc = abs(c);
 
-		if (na >= nb)
-		{
-			max = nb;
-		}
-		else
-		{
-			max = na;
-		}
-		if (nc < max)
-		{
-			max = nc;
-		}
-	}
-	printf("max=%d", -max);
-	return 0;
+  if (na >= nb)
+  {
+   max = nb;
+  }
+  else
+  {
+   max = na;
+  }
+  if (nc < max)
+  {
+   max = nc;
+  }
+  printf("max=%d", -max);
+ }
+ return 0;
 }
 //执行结果(测试不同分支结果)：（4分）
 // 
