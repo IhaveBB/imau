@@ -332,3 +332,31 @@ int main()
 	}
 	return 0;
 }
+
+#define _CRT_SECURE_NO_WARNINGS
+//（11）    某产品生产成本c = c1 + mc2，其中c1为固定成本，c2为单位产品可变成本。当生产数量m < 10000时，c1 = 20000元，c2 = 10元；
+//	当生产数量m≥10000时，c1 = 40000元，c2 = 5元；编写一个程序，其功能为：分别计算出生产数量为6000以及25000时，总生产成本及单位生产成本。
+#include<stdio.h>
+int main()
+{
+	int c1, c2, c, m,single;
+	printf("please input one number");
+	scanf("%d", &m);
+	if (m < 10000)
+	{
+		c1 = 20000;
+		c2 = 10;
+		c = c1 + m * c2;
+		single = c / m;
+		printf("总生产成本为：%d，单位生产成本为：%d",c, single);
+	}
+	else if (m >= 10000)
+	{
+		c1 = 40000;
+		c2 = 5;
+		c = c1 + m * c2;
+		single = c / m;
+		printf("总生产成本为：%d，单位生产成本为：%d",c,single);
+	}
+	return 0;
+}
