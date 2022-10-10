@@ -1,3 +1,6 @@
+//2022122100848 刘均宝
+
+
 #define _CRT_SECURE_NO_WARNINGS
 //项目1.分支程序设计：
 //
@@ -501,7 +504,7 @@ int main()
 		}
 		else
 		{
-			printf("%d不是水仙花数", x);
+			// 刘均宝printf("%d不是水仙花数", x);
 		}
 	}
 	else
