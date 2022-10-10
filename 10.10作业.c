@@ -360,3 +360,22 @@ int main()
 	}
 	return 0;
 }
+//（12）    编写程序，输入某学生的成绩，经处理后给出学生的等级，等级分类如下：
+#include<stdio.h>
+int main()
+{
+    int scores;
+    scanf("%d", &scores);
+    if (90 <= scores && scores <= 100)
+        printf("A");
+    if (80 < scores && scores < 89)
+        printf("B");
+    if (70 < scores && scores < 79)
+        printf("C");
+    if (60 < scores && scores < 69)
+        printf("D");
+    if (scores < 60)
+        printf("E");
+    return 0;
+}
+	
