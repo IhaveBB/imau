@@ -4,7 +4,7 @@
 //问题1.编写程序，在已知三个数a，b，c中找出最大值放于max中，然后输出max。（总分占比30% ）
 //设计思路描述：（10）
 //
-//答：首先定义三个数abc，后对其进行判断。首先比较a和b的大小，将大的数存入max，在判断c和max的大小，最后输出。
+//答：首先定义三个数abc，后对其进行判断。首先比较a和b的大小，将大的数存入max，再判断c和max的大小，最后输出。
 //
 //源代码：（6分）
 #include<stdio.h>
@@ -584,4 +584,44 @@ int main()
 	}
 	return 0;
 }
-	
+#define _CRT_SECURE_NO_WARNINGS
+//（18）    编程设计一个简单的计算器程序，要求根据用户从键盘输入的表达式计算，并使用switch语句实现。
+//
+//操作数1  运算符op  操作数2  计算表达式的值。指定的运算符为加(+)、减(-)、乘(*)、除(/ )。
+#include<stdio.h>
+int main()
+{
+	char op;
+	float result,x,y;
+	printf("please input number op number");
+	scanf("%f%c%f", &x, &op, &y);
+	switch (op)
+	{
+		case '+':
+		{
+			result = x + y;
+			printf("result = %0.2f", result);
+			break;
+		}
+		case '-':
+		{
+			result = x - y;
+			printf("result = %0.2f", result);
+			break;
+		}
+		case '*':
+		{
+			result = x * y;
+			printf("result = %0.2f", result);
+			break;
+		}
+		case '/':
+		{
+			result = x / y;
+			printf("result = %0.2f", result);
+			break;
+		}
+	}
+	return 0;
+}
+
