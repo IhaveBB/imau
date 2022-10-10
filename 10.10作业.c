@@ -309,3 +309,26 @@ int main()
 
 	return 0;
 }
+#define _CRT_SECURE_NO_WARNINGS
+//（10）    编写程序，任意输入一个年份，判断是否是闰年。
+//
+//闰年的条件是符合下面条件之一：
+//
+//能被4整除，但不能被100整除；能被4整除，又能被400整除。
+//
+//编写一个程序，计算下列函数：
+#include<stdio.h>
+int main()
+{
+	int a=0,result;
+	scanf("%d", &a);
+	if (a % 4 == 0 && a % 100 != 0 || a % 4 == 0 && a % 400 == 0)
+	{
+		printf("%d是闰年",a);
+	}
+	else
+	{
+		printf("%d不是闰年", a);
+	}
+	return 0;
+}
