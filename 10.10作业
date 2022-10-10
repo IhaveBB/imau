@@ -105,3 +105,121 @@ int main()
 //在设计过程中，误将=理解为==，导致错误。
 //因此在设计过程中，应加强理解，记住并改正错误。
 
+//项目2.分支程序设计练习：（以下问题提供代码即可，总分占比40% ）
+//
+//
+//
+//
+//
+//（1）    编写一个程序，输入两个整数，如果前者是后者的约数，则显示后者是前者的约数，否则显示后者不是前者的约数。
+#include<stdio.h>
+int main()
+{
+	int a=0, b=0;
+	printf("请输入两个数值");
+	scanf("%d%d", &a, &b);
+	if (a % b == 0 || b == 1)
+	{
+		printf("%d是%d的约数", b, a);
+	}
+	else
+	{
+		printf("%d不是%d的约数", b, a);
+	}
+
+	return 0;
+} 
+//（2）    编写程序，输入一个数，输出该数的绝对值。
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a,na;
+	printf("请输入一个数值");
+	scanf("%d", &a);
+	na = abs(a);
+	printf("%d的绝对值是%d", a, na);
+	return 0;
+}
+// 3.编写程序，输入两个数，如果两数相等，则显示 a 等于 b，如果 a>b,则显示 a>b,如果 a<b,
+// 则显示 a 小于 b。
+#include<stdio.h>
+int main()
+{
+    int a,b,x;
+    printf("请输入两个数");
+    scanf("%d%d",&a,&b);
+    if(a>b)
+    {
+        printf("%d>%d",a,b);
+    }
+    else if(a==b)
+    {
+        printf("%d=%d",a,b);
+    }
+    else if(a<b)
+    {
+        printf("%d<%d",a,b);
+    }
+
+    return 0;
+}
+#define _CRT_SECURE_NO_WARNINGS
+//（4）    编写一个程序，其功能为：从键盘输入三个数a、b、c，判断a + b = c是否成立，
+//若成立输出“a + b = c”的信息，否则输出“a + b != c”的信息。
+#include<stdio.h>
+int main()
+{
+	int a, b, c;
+	printf("请输入三个数");
+	scanf("%d%d%d",  &a, &b, &c );
+	if (a + b == c)
+	{
+		printf("%d+%d=%d", a, b, c);
+	}
+	else
+	{
+		printf("%d+%d!=%d", a, b, c);
+	}
+	return 0;
+}
+#define _CRT_SECURE_NO_WARNINGS
+//（5）    编写程序，计算输入的三个整数中的最小值并输出。
+#include<stdio.h>
+int main()
+{
+	int a, b, c, min;
+	printf("请输入三个数abc");
+	scanf("%d%d%d", &a, &b, &c);
+	if (a >= b)
+	{
+		min = b;
+	}
+	else
+	{
+		min = a;
+	}
+	if (c <= a)
+	{
+		min = c;
+	}
+	printf("最小值为%d", min);
+		return 0;
+}
+#define _CRT_SECURE_NO_WARNINGS
+//（6）    8.编写程序，计算输入的四个整数中的最大值并输出。
+#include<stdio.h>
+int main()
+{
+	int x,max,i;
+	max = -1e30;
+	printf("^please input fore number");
+	for (i =0;i<4;i++)
+	{
+		scanf("%d", &x);
+		if (x > max)
+		max = x;
+	}
+	printf("max=%d", max);
+	return 0;
+    
