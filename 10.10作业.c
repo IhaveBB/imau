@@ -223,4 +223,43 @@ int main()
 	}
 	printf("max=%d", max);
 	return 0;
-    
+#define _CRT_SECURE_NO_WARNINGS
+//（7）    用if语句编程实现输入三角形的三个边长，判断三边长是否能构成一个三角形，
+//若能，则计算出三角形的面积，若不能，则输出信息告诉用户输入的三边长不能构成三角形。
+#include<stdio.h>
+#include<math.h>
+int isTriangle(int a, int b, int c)
+{
+	if (a + b > c && a + c > b && b + c > a)
+	{
+		return 1;
+	}
+	return 0;
+}
+int area(int a, int b, int c)
+{
+	int p, s;
+	p = (a + b + c) / 2;
+	s = sqrt(p * (p - a) * (p - b) * (p - c));
+	return s;
+}
+int main()
+{
+	int a, b, c;
+	printf("please input tree number");
+	scanf("%d%d%d", &a, &b, &c);
+	if (isTriangle(a,b,c) == 1)
+	{
+		printf("it is a triangle\n");
+	}
+	else
+	{
+		printf("it is'n a triangle\n");
+		return 0;
+	}
+	int s;
+	s = area(a, b, c);
+	printf("%d", s);
+	return 0;
+
+}
